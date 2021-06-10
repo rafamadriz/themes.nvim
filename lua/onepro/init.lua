@@ -33,7 +33,7 @@ local function set_groups()
         EndOfBuffer = {fg = c.gray}, -- ~ lines at the end of a buffer
         NormalFloat = {fg = c.fg, bg = c.bg1}, -- normal text and background color for floating windows
         FloatBorder = {fg = c.blue, bg = c.bg1},
-        ColorColumn = {fg = c.none, bg = c.fg}, --  used for the columns set with 'colorcolumn'
+        ColorColumn = {fg = c.none, bg = c.bg1}, --  used for the columns set with 'colorcolumn'
         Conceal = {fg = c.gray}, -- placeholder characters substituted for concealed text (see 'conceallevel')
         Cursor = {fg = c.cyan, bg = c.none, style = "reverse"}, -- the character under the cursor
         CursorIM = {fg = c.cyan, bg = c.none, style = "reverse"}, -- like Cursor, but used when in IME mode
@@ -311,15 +311,15 @@ local function set_groups()
         NERDTreeToggleOff = {fg = c.red},
         -- NvimTree
         NvimTreeRootFolder = {fg = c.cyan, style = "italic"},
-        NvimTreeNormal = {fg = c.blue, bg = bg0},
+        NvimTreeNormal = {fg = c.fg, bg = bg0},
         NvimTreeGitDirty = {fg = c.diff_yellow},
         NvimTreeGitNew = {fg = c.green},
         NvimTreeImageFile = {fg = c.purple},
         NvimTreeExecFile = {fg = c.green},
         NvimTreeSpecialFile = {fg = c.yellow, style = "underline"},
-        NvimTreeFolderName = {fg = c.green},
+        NvimTreeFolderName = {fg = c.blue},
         NvimTreeEmptyFolderName = {fg = c.gray},
-        NvimTreeFolderIcon = {fg = c.blue},
+        NvimTreeFolderIcon = {fg = c.gray_alt},
         NvimTreeIndentMarker = {fg = c.gray},
         LspDiagnosticsError = {fg = c.red},
         LspDiagnosticsWarning = {fg = c.orange},
