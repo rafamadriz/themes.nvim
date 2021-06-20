@@ -43,7 +43,7 @@ local function set_groups()
         DiffDelete = {fg = c.diff_red, bg = c.none, style = "reverse"}, -- diff mode: Deleted line
         DiffText = {fg = c.fg, bg = c.none, style = "reverse"}, -- diff mode: Changed text within a changed line
         ErrorMsg = {fg = c.red}, -- error messages
-        Folded = {fg = c.gray, c.none, style = "italic"},
+        Folded = {fg = c.gray_alt, bg = c.bg1, style = "bold"},
         FoldColumn = {fg = c.blue},
         IncSearch = {style = "reverse"},
         LineNr = {fg = c.gray},
@@ -85,7 +85,7 @@ local function set_groups()
         InsertMode = {fg = c.green, bg = c.none, style = "reverse"},
         ReplacelMode = {fg = c.red, bg = c.none, style = "reverse"},
         VisualMode = {fg = c.cyan, bg = c.none, style = "reverse"},
-        VertSplit = {fg = c.gray_alt},
+        VertSplit = {fg = c.bg1},
         CommandMode = {fg = c.gray, bg = c.none, style = "reverse"},
         Warnings = {fg = c.orange},
         healthError = {fg = c.red},
@@ -311,7 +311,7 @@ local function set_groups()
         NERDTreeToggleOff = {fg = c.red},
         -- NvimTree
         NvimTreeRootFolder = {fg = c.cyan, style = "italic"},
-        NvimTreeNormal = {fg = c.fg, bg = bg0},
+        NvimTreeNormal = {fg = c.fg, bg = c.bg1},
         NvimTreeGitDirty = {fg = c.diff_yellow},
         NvimTreeGitNew = {fg = c.green},
         NvimTreeImageFile = {fg = c.purple},
@@ -320,7 +320,7 @@ local function set_groups()
         NvimTreeFolderName = {fg = c.blue},
         NvimTreeEmptyFolderName = {fg = c.gray},
         NvimTreeFolderIcon = {fg = c.gray_alt},
-        NvimTreeIndentMarker = {fg = c.gray},
+        NvimTreeIndentMarker = {fg = c.cursor},
         LspDiagnosticsError = {fg = c.red},
         LspDiagnosticsWarning = {fg = c.orange},
         LspDiagnosticsInformation = {fg = c.gray_alt},
