@@ -1,18 +1,15 @@
-*neon.txt*
+*themes-nvim.txt*
 
-CONTENTS                                     *neon-contents*
+CONTENTS                                     *themes-nvim-contents*
 
-Introduction                                 |neon-introduction|
-Installation                                 |neon-installation|
-Usage                                        |neon-usage|
-Configuration                                |neon-configuration|
-FAQ                                          |neon-faq|
+Introduction                                 |themes-nvim-introduction|
+Installation                                 |themes-nvim-installation|
+Usage                                        |themes-nvim-usage|
+Configuration                                |themes-nvim-configuration|
+FAQ                                          |themes-nvim-faq|
 
 ==============================================================================
-INTRODUCTION                                                 *neon-introduction*
-
-Customizable coloscheme with dark and light options, vivid colors and easy on the eye.
-Inspired by the awesome *doom-one* colorscheme from emacs.
+INTRODUCTION                                                 *themes-nvim-introduction*
 
 Features~
 
@@ -24,20 +21,22 @@ Features~
 - Bold support.
 
 ==============================================================================
-INSTALLATION                                                 *neon*
+INSTALLATION                                                   *themes-nvim*
 
 Via Plugin Manager~
 
     Use your favorite plugin manager. Example [packer](https://github.com/wbthomason/packer.nvim):
 >
-        use "rafamadriz/neon"
+        use "rafamadriz/themes.nvim"
 <
     Make sure to have [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) installed.
 
 ==============================================================================
-USAGE                                                               *neon-usage*
+USAGE                                                           *themes-nvim-usage*
 
 Neovim~
+
+    Available themes are: `darcula, forest, gruvbox, neon, onepro, tokyonight`
 
     To set the theme you can use the following.
 >
@@ -47,69 +46,40 @@ Neovim~
 >
         colorscheme neon
 <
-    See |neon-configuration| for more configuration options.
+    See |themes-nvim-configuration| for more configuration options.
 
     If you want to apply this color scheme temporarily, run this command in
     vim(this may cause broken colors):
 >
         :colorscheme neon
 <
-------------------------------------------------------------------------------
-
-Lualine~
-
-    To enable [lualine](https://github.com/hoob3rt/lualine.nvim) color
-    scheme, put this somewhere in your config:
->
-        require('lualine').setup {
-          options = {
-            -- ... your lualine config
-            theme = 'neon'
-            -- ... your lualine config
-          }
-        }
-<
 ==============================================================================
 
-CONFIGURATION                                               *neon-configuration*
+CONFIGURATION                                               *themes-nvim-configuration*
 
 Note: the configuration options should be placed before `vim.cmd[[colorscheme neon]]`
 
 E.g.
 >
-        vim.g.neon_style = "default"
-        vim.g.neon_italic_keyword = true
-        vim.g.neon_italic_function = true
+        vim.g.themes_italic_keyword = true
+        vim.g.themes_italic_function = true
 
         vim.cmd[[colorscheme neon]]
 <
 ------------------------------------------------------------------------------
-                                                                  *vim.g.neon_style*
-vim.g.neon_style~
-
-The style of this color scheme.
-
-        Available values: `"default"`, `"dark"`, `"light"`
-        Default value: `'default'`
-
-E.g.
->
-        vim.g.neon_style = 'dark'
-<
-------------------------------------------------------------------------------
-                                                 *vim.g.neon_italic_comment*
-vim.g.neon_italic_comment~
+                                                 *vim.g.themes_italic_comment*
+vim.g.themes_italic_comment~
 
 By default, italic is enabled in `Comment`. To disable italic in `Comment`, set
 this option to `false`.
 
 E.g.
 >
-        vim.g.neon_italic_comment = false
+        vim.g.themes_italic_comment = false
 <
 ------------------------------------------------------------------------------
-                                                          *vim.g.neon_italic_keyword*
-vim.g.neon_italic_keyword~
+                                                          *vim.g.themes_italic_keyword*
+vim.g.themes_italic_keyword~
 
 This applies to conditionals and keywords like `for`, `do`, `while`, `loops` etc.
 
@@ -118,14 +88,14 @@ This applies to conditionals and keywords like `for`, `do`, `while`, `loops` etc
 
 E.g.
 >
-        vim.g.neon_italic_keyword = true
+        vim.g.themes_italic_keyword = true
 <
 Note: All of the italic options are designed to use with fonts that support cursive italics.
-See |neon-faq| for more information.
+See |themes-faq| for more information.
 
 ------------------------------------------------------------------------------
-                                                          *vim.g.neon_italic_boolean*
-vim.g.neon_italic_boolean~
+                                                          *vim.g.themes_italic_boolean*
+vim.g.themes_italic_boolean~
 
 This applies to `true` and `false`.
 
@@ -134,12 +104,12 @@ This applies to `true` and `false`.
 
 E.g.
 >
-        vim.g.neon_italic_boolean = true
+        vim.g.themes_italic_boolean = true
 <
 
 ------------------------------------------------------------------------------
-                                                          *vim.g.neon_italic_function*
-vim.g.neon_italic_function~
+                                                          *vim.g.themes_italic_function*
+vim.g.themes_italic_function~
 
 This applies to function (calls and definitions), method (calls and definitions) and
 built-in functions.
@@ -149,11 +119,11 @@ built-in functions.
 
 E.g.
 >
-        vim.g.neon_italic_function = true
+        vim.g.themes_italic_function = true
 <
 ------------------------------------------------------------------------------
-                                                          *vim.g.neon_italic_variable*
-vim.g.neon_italic_variable~
+                                                          *vim.g.themes_italic_variable*
+vim.g.themes_italic_variable~
 
 This applies to variable names that are defined by the languages, like `this` or `self`.
 And any variable name that does not have another highlight group.
@@ -163,21 +133,10 @@ And any variable name that does not have another highlight group.
 
 E.g.
 >
-        vim.g.neon_italic_variable = true
-<
-------------------------------------------------------------------------------
-                                                          *vim.g.neon_bold*
-vim.g.neon_bold~
-
-        Available values: `true`, `false`
-        Default value: `false`
-
-E.g.
->
-        vim.g.neon_bold = true
+        vim.g.themes_italic_variable = true
 <
 ==============================================================================
-FAQ                                                                   *neon-faq*
+FAQ                                                            *themes-nvim-faq*
 
 It doesn't work as expected.~
 
@@ -198,7 +157,7 @@ How to enable cursive italic keywords?~
 
 2. Set the correct italic font for your terminal of choice.
 
-3. Enable italic text. E.g. `vim.g.neon_italic_keyword = true`
+3. Enable italic text. E.g. `vim.g.themes_italic_keyword = true`
 
 ==============================================================================
 vim:tw=78:nosta:noet:ts=8:sts=0:ft=help:et:sw=4:fen:fdm=marker:fmr={{{,}}}:

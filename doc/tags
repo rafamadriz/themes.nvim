@@ -1,0 +1,12 @@
+themes-nvim	themes_nvim.txt	/*themes-nvim*
+themes-nvim-configuration	themes_nvim.txt	/*themes-nvim-configuration*
+themes-nvim-contents	themes_nvim.txt	/*themes-nvim-contents*
+themes-nvim-faq	themes_nvim.txt	/*themes-nvim-faq*
+themes-nvim-introduction	themes_nvim.txt	/*themes-nvim-introduction*
+themes-nvim-usage	themes_nvim.txt	/*themes-nvim-usage*
+themes-nvim.txt	themes_nvim.txt	/*themes-nvim.txt*
+vim.g.themes_italic_boolean	themes_nvim.txt	/*vim.g.themes_italic_boolean*
+vim.g.themes_italic_comment	themes_nvim.txt	/*vim.g.themes_italic_comment*
+vim.g.themes_italic_function	themes_nvim.txt	/*vim.g.themes_italic_function*
+vim.g.themes_italic_keyword	themes_nvim.txt	/*vim.g.themes_italic_keyword*
+vim.g.themes_italic_variable	themes_nvim.txt	/*vim.g.themes_italic_variable*
