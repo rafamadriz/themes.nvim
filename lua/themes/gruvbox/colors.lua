@@ -3,25 +3,26 @@ local util = require("themes.utils")
 local colors = {}
 
 colors = {
-    none = "NONE",
-    bg_dark = "#1d2021", -- popups, statusline, sidebar, float
-    bg = "#282828", -- Normal background
-    bg_highlight = "#32302f", -- cursor line and column
-    fg = "#ebdbb2", -- normal text
-    fg_dark = "#bdae93", -- brackets and parents, cmd line messages
-    fg_gutter = "#7c6f64", -- conceal, closed folds, menu selected item...
-    comment = "#a89984", -- comments
-    red = "#fe8019", -- boolean, variable built-in, error
-    orange = "#d3869b", -- Constant, TODO, MatchParen, IncSearch
-    yellow = "#83a598", -- parameter of a funciton, warning
-    green = "#b8bb26", -- strings
-    aqua = "#83a598", -- type (int, long, char, etc), special symbol, fields
-    blue = "#fabd2f", -- function name, labels...
-    cyan = "#8ec07c", -- operators, any other keyword
-    teal = "#427b58", -- markdown codeblocks, text references
-    magenta = "#fb4934", -- identifier, statements (if, then, while, for, etc), constructor...
-    purple = "#fb4934", -- keywords
-    gray = "#a89984"
+	none = "NONE",
+	bg_dark = "#32302f", -- popups, statusline, sidebar, float
+	bg = "#282828", -- Normal background
+	bg_highlight = "#32302f", -- cursor line and column
+	fg = "#ebdbb2", -- normal text
+	fg_dark = "#bdae93", -- brackets and parents, cmd line messages
+	fg_gutter = "#7c6f64", -- conceal, closed folds, menu selected item...
+	comment = "#a89984", -- comments
+	red = "#fe8019", -- boolean, variable built-in, error
+	orange = "#d3869b", -- Constant, TODO, MatchParen, IncSearch
+	yellow = "#83a598", -- parameter of a funciton, warning
+	green = "#b8bb26", -- strings
+	aqua = "#83a598", -- type (int, long, char, etc), special symbol, fields
+	blue = "#fabd2f", -- function name, labels...
+	pmenu = "#504945",
+	cyan = "#8ec07c", -- operators, any other keyword
+	teal = "#427b58", -- markdown codeblocks, text references
+	magenta = "#fb4934", -- identifier, statements (if, then, while, for, etc), constructor...
+	purple = "#fb4934", -- keywords
+	gray = "#a89984",
 }
 
 -- diff

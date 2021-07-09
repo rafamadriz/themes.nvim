@@ -1,7 +1,7 @@
-local c = require("themes.forest.colors")
+local c = require("themes.tokyonight_dark.colors")
 local utils = require("themes.utils")
 local cfg = require("themes.config").styles
-local forest = {}
+local tokyonight_dark = {}
 
 local function set_terminal_colors()
 	vim.g.terminal_color_0 = c.gray
@@ -44,11 +44,11 @@ local function set_groups()
 		-- TermCursorNC= { }, -- cursor in an unfocused terminal
 		ErrorMsg = { fg = c.error }, -- error messages on the command line
 		VertSplit = { fg = c.border }, -- the column separating vertically split windows
-		Folded = { fg = c.blue, bg = c.fg_gutter }, -- line used for closed folds
+		Folded = { fg = c.blue, bg = c.bg_dark }, -- line used for closed folds
 		FoldColumn = { bg = c.bg, fg = c.comment }, -- 'foldcolumn'
 		SignColumn = { bg = cfg.transparent and c.none or c.bg, fg = c.fg_gutter }, -- column where |signs| are displayed
 		SignColumnSB = { bg = c.bg_sidebar, fg = c.fg_gutter }, -- column where |signs| are displayed
-		Substitute = { bg = c.red, fg = c.bg_dark }, -- |:substitute| replacement text highlighting
+		Substitute = { style = "reverse" }, -- |:substitute| replacement text highlighting
 		LineNr = { fg = c.fg_gutter }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		CursorLineNr = { fg = c.fg_dark }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 		MatchParen = { fg = c.orange, style = "bold" }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
@@ -68,7 +68,7 @@ local function set_groups()
 		PmenuThumb = { bg = c.fg_gutter }, -- Popup menu: Thumb of the scrollbar.
 		Question = { fg = c.blue }, -- |hit-enter| prompt and yes/no questions
 		QuickFixLine = { bg = c.bg_visual, style = "bold" }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-		Search = { bg = c.bg_search, fg = c.fg }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+		Search = { bg = c.bg_search, fg = c.bg }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
 		IncSearch = { bg = c.orange, fg = c.bg_dark }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
 		SpecialKey = { fg = c.comment }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
 		SpellBad = { sp = c.error, style = "undercurl" }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
@@ -134,7 +134,7 @@ local function set_groups()
 		-- Ignore = { }, -- (preferred) left blank, hidden  |hl-Ignore|
 
 		Error = { fg = c.error }, -- (preferred) any erroneous construct
-		Todo = { bg = c.yellow, fg = c.bg }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+		Todo = { bg = c.orange, fg = c.bg }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 		qfLineNr = { fg = c.fg_dark },
 		qfFileName = { fg = c.blue },
 		htmlH1 = { fg = c.magenta, style = "bold" },
@@ -434,18 +434,18 @@ local function set_groups()
 	end
 end
 
-function forest.colorscheme()
+function tokyonight_dark.colorscheme()
 	vim.api.nvim_command("hi clear")
 	if vim.fn.exists("syntax_on") then
 		vim.api.nvim_command("syntax reset")
 	end
 
 	vim.o.termguicolors = true
-	vim.g.colors_name = "forest"
+	vim.g.colors_name = "tokyonight_dark"
 
 	-- c.generate()
 	set_terminal_colors()
 	set_groups()
 end
 
-return forest
+return tokyonight_dark
