@@ -190,8 +190,8 @@ local function set_groups()
 		-- TSBoolean           = { };    -- For booleans.
 		-- TSCharacter         = { };    -- For characters.
 		-- TSComment           = { };    -- For comment blocks.
-		TSNote = { fg = c.bg, bg = c.info },
-		TSWarning = { fg = c.bg, bg = c.warning },
+		TSNote = { fg = c.info, bg = c.none, style = "bold" },
+		TSWarning = { fg = c.warning, bg = c.none, style = "bold" },
 		TSDanger = { fg = c.bg, bg = c.error },
 		TSConstructor = { fg = c.syntax.variable }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
 		-- TSConditional       = { };    -- For keywords related to conditionnals.
