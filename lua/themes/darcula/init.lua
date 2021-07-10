@@ -81,7 +81,7 @@ local function set_groups()
 		TabLineFill = { bg = c.bg_dark }, -- tab pages line, where there are no labels
 		TabLineSel = { fg = c.bg_dark, bg = c.blue, style = "bold" }, -- tab pages line, active tab page label
 		Title = { fg = c.blue, style = "bold" }, -- titles for output from ":set all", ":autocmd" etc.
-		Visual = { bg = c.bg_visual }, -- Visual mode selection
+		Visual = { style = "reverse" }, -- Visual mode selection
 		VisualNOS = { bg = c.bg_visual }, -- Visual mode selection when vim is "Not Owning the Selection".
 		WarningMsg = { fg = c.warning }, -- warning messages
 		Whitespace = { fg = c.fg_gutter }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
