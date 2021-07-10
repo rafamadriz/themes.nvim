@@ -39,6 +39,7 @@ colors = {
 	warning = "#cca700",
 	info = "#75beff",
 	hint = "#eeeeb3",
+	none = "NONE",
 	syntax = {
 		comment = "#6a737d",
 		constant = "#79b8ff",
