@@ -1,7 +1,7 @@
-local c = require("themes.onepro.colors")
+local c = require("themes.onedark.colors")
 local utils = require("themes.utils")
 local cfg = require("themes.config").styles
-local onepro = {}
+local onedark = {}
 
 local function set_terminal_colors()
 	vim.g.terminal_color_0 = c.gray
@@ -435,18 +435,18 @@ local function set_groups()
 	end
 end
 
-function onepro.colorscheme()
+function onedark.colorscheme()
 	vim.api.nvim_command("hi clear")
 	if vim.fn.exists("syntax_on") then
 		vim.api.nvim_command("syntax reset")
 	end
 
 	vim.o.termguicolors = true
-	vim.g.colors_name = "onepro"
+	vim.g.colors_name = "onedark"
 
 	-- c.generate()
 	set_terminal_colors()
 	set_groups()
 end
 
-return onepro
+return onedark
