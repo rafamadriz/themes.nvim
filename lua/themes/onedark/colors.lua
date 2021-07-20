@@ -8,7 +8,6 @@ colors = {
 	bg = "#1e222a", -- Normal background
 	bg_highlight = "#2c313c", -- cursor line and column
 	black2 = "#252931",
-	bg = "#282c34", -- real bg of onedark
 	bg2 = "#353b45",
 	bg3 = "#30343c",
 	fg = "#abb2bf", -- normal text
