@@ -1,7 +1,7 @@
-local c = require("themes.tokyonight_dark.colors")
+local c = require("themes.tokyodark.colors")
 local utils = require("themes.utils")
 local cfg = require("themes.config").styles
-local tokyonight_dark = {}
+local tokyodark = {}
 
 local function set_terminal_colors()
 	vim.g.terminal_color_0 = c.gray
@@ -434,18 +434,18 @@ local function set_groups()
 	end
 end
 
-function tokyonight_dark.colorscheme()
+function tokyodark.colorscheme()
 	vim.api.nvim_command("hi clear")
 	if vim.fn.exists("syntax_on") then
 		vim.api.nvim_command("syntax reset")
 	end
 
 	vim.o.termguicolors = true
-	vim.g.colors_name = "tokyonight_dark"
+	vim.g.colors_name = "tokyodark"
 
 	-- c.generate()
 	set_terminal_colors()
 	set_groups()
 end
 
-return tokyonight_dark
+return tokyodark
