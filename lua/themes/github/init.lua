@@ -80,7 +80,7 @@ local function set_groups()
 		Visual = { bg = c.bg_visual_selection }, -- Visual mode selection
 		VisualNOS = { bg = c.bg_visual_selection }, -- Visual mode selection when vim is "Not Owning the Selection".
 		WarningMsg = { fg = c.warning }, -- warning messages
-		Whitespace = { fg = utils.darken(c.syntax.comment, 0.4) }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
+		Whitespace = { fg = c.syntax.comment }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
 		WildMenu = { bg = c.bg_visual }, -- current match in 'wildmenu' completion
 		-- These groups are not listed as default vim groups,
 		-- but they are defacto standard group names for syntax highlighting.
